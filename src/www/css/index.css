@@ -1,0 +1,138 @@
+h1,h2,h3,h4,h5,h6
+{
+    padding: 0;
+    margin: 0;
+}
+
+header
+{
+    text-align: center;
+    padding: .5em 0;
+}
+
+.informationContent
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0 .2em;
+}
+
+.informationField
+{
+    display: flex;
+    margin: 5px 0;
+}
+
+.informationField > label
+{
+   width: 25%;
+   text-align: center;
+   padding-right: 10px;
+}
+
+.informationField > input
+{
+    flex-grow: 1;
+}
+
+.widgetContent
+{
+    padding: .5em;
+    margin-bottom: .25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.widgetNavigation
+{
+    list-style: none;
+    display: flex;
+    margin: 0.3em;
+    padding: 0;
+}
+
+.widgetNavigation > li{
+
+    padding: 0 10px;
+}
+
+.currentWidget
+{
+    width: auto;
+    position: relative;
+    margin: 0.25em 0 1em 0;
+}
+
+#widgetImage
+{
+    width: 330px;
+    height: 330px;
+}
+
+#widgetDescription
+{
+    width: 330px;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.25);
+    border-radius: 0.2em;
+    outline: red;
+}
+
+.orderContent
+{
+    display: flex;
+    flex-direction: column;
+    padding: 0 .2em 1em 0.2em;
+}
+
+.buttonGroup
+{
+    display: flex;
+    justify-content: center;
+}
+
+.buttonGroup > button
+{
+    padding: .2em;
+    margin: 0 .2em;
+}
+
+.invoice
+{
+    margin-top: .5em;
+    overflow-y: scroll;
+    height: 40vh;
+}
+
+.invoice > p
+{
+    margin-top: 0;
+}
+
+.invoice > table
+{
+    width: 100%;
+}
+
+.invoice > table > caption
+{
+    text-align: left;
+}
+
+#orderSummary
+{
+    text-align: center;
+}
+
+#mapContainer
+{
+    background-color: red;
+    width: 100%;
+    height: 35vh;
+}

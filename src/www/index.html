@@ -1,0 +1,134 @@
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="format-detection" content="telephone=no">
+			<meta name="msapplication-tap-highlight" content="no">
+			<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+			<meta http-equiv="Content-Security-Policy" content="">
+
+			<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+			<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+			<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js" charset="utf-8"></script>
+			<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js" charset="utf-8"></script>
+			<script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js" type="text/javascript" charset="utf-8"></script>
+			<link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+			<script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js" type="text/javascript" charset="utf-8"></script>
+			
+			<link rel="stylesheet" href="./css/index.css">
+			<title>MegaMax Sale</title>
+
+			
+		</head>
+		<body>
+
+			<header>
+				<h1>MegaMax Sale</h1>
+			</header>
+			<main>
+				<section class="informationContent">
+					<div class="informationField">
+						<label for="salesPerson">Salesperson</label>
+						<input id="salesPerson" type="text">
+					</div>
+					<div class="informationField">
+						<label for="clientID">Client ID</label>
+						<input id="clientID" type="text">
+					</div>
+				</section>
+
+				<section class="widgetContent">
+					<!-- TODO II. Widget navigation buttons -->
+					<h2 id="widgetName"></h2>
+					<div class="currentWidget">
+						<img id="widgetImage" src="http://137.108.92.9/openstack/images/widget1.jpg" alt="Current Widgets Image">
+						<p id="widgetDescription">Loading...</p>
+					</div>
+					<ul class="widgetNavigation">
+						<li><button id="prevWidget" onclick="window.application.switchWidget(0)">Previous Widget</button></li>
+						<li><button id="nextWidget" onclick="window.application.switchWidget(1)">Next Widget</button></li>
+					</ul>
+				</section>
+				<section class="orderContent">
+					<div class="informationField">
+						<label for="agreedPrice">Agreed Price</label>
+						<input id="agreedPrice" type="text">
+					</div>
+					<div class="informationField">
+						<label for="widgetAmount">Amount</label>
+						<input id="widgetAmount" type="text">
+					</div>
+					<div class="buttonGroup">
+						<button onclick="window.application.addWidget();">Add to Order</button>
+						<button onclick="window.application.completeOrder();">Complete Order</button>
+						<button onclick="window.application.newOrder();">Place new Order</button>
+					</div>
+
+					<div class="invoice">
+
+						<table id="orderSummary">
+							<caption id="orderSummaryTitle">
+								<h3>Order Summary</h3>
+								<p>Dear {Name},<br>Your summary for order {orderID} to {Client Address}</p>
+							</caption>
+							<thead>
+								<th>Widget</th>
+								<th>Amount Ordered</th>
+								<th>Price per/Widget</th>
+								<th>Total</th>
+							</thead>
+							<tbody id="orderBody">
+								<tr>
+									<td>Widget 8</td>
+									<td>10</td>
+									<td>£7.99</td>
+									<td>£79.99</td>
+								</tr>
+								<tr>
+									<td>Widget 8</td>
+									<td>10</td>
+									<td>£7.99</td>
+									<td>£79.99</td>
+								</tr>
+								<tr>
+									<td>Widget 8</td>
+									<td>10</td>
+									<td>£7.99</td>
+									<td>£79.99</td>
+								</tr>
+								<tr>
+									<td>Widget 8</td>
+									<td>10</td>
+									<td>£7.99</td>
+									<td>£79.99</td>
+								</tr>
+								<tr>
+									<td>Widget 8</td>
+									<td>10</td>
+									<td>£7.99</td>
+									<td>£79.99</td>
+								</tr>
+								<tr>
+									<td>Widget 8</td>
+									<td>10</td>
+									<td>£7.99</td>
+									<td>£79.99</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3">Total</td>
+									<td>XXX (incl. VAT)</td>
+								</tr>
+							</tfoot>
+						</table>
+						
+					</div>
+				</section>
+				<!-- <section id="mapContainer"></section> -->
+				<div id="mapContainer"></div>
+			</main>			
+			<script type="text/javascript" src="cordova.js"></script>
+			<script type="module" src="js/index.js"></script>
+		</body>
+	</html>
